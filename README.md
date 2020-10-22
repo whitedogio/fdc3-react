@@ -63,7 +63,7 @@ const MyComponent: React.FunctionComponent = () => {
 ### useAddIntentListener
 
 ```tsx
-import { broadcast, Contact, Context, ContextTypes } from '@finos/fdc3';
+import { Contact, Context, ContextTypes, Intents, raiseIntent } from '@finos/fdc3';
 import { useAddContextListener } from '@whitedog/fdc3-react';
 
 const MyComponent: React.FunctionComponent = () => {
