@@ -2,7 +2,7 @@ import {
   ContextHandler,
   ContextTypes,
   DesktopAgent,
-  Listener
+  Listener,
 } from '@finos/fdc3';
 import { act, cleanup, renderHook } from '@testing-library/react-hooks';
 import { useAddContextListener } from '../src';

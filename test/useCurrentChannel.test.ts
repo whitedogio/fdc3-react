@@ -18,7 +18,7 @@ test('useCurrentChannel', async () => {
   let [channel, refresh] = result.current;
 
   expect(channel).toBeUndefined();
-  
+
   await waitForNextUpdate();
   [channel, refresh] = result.current;
 
