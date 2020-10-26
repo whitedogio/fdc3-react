@@ -12,8 +12,8 @@ export const useAddContextListener: (type?: ContextType) => Context = (
   const [context, setContext] = useState((undefined as unknown) as Context);
 
   useEffect(() => {
-    const handler: ContextHandler = context => {
-      setContext(context);
+    const handler: ContextHandler = newContext => {
+      setContext(newContext);
     };
 
     const listener = type

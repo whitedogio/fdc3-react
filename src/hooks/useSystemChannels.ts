@@ -1,12 +1,45 @@
 import { Channel, getSystemChannels } from '@finos/fdc3';
 import { useEffect, useState } from 'react';
 
-export const useSystemChannels: () => Array<Channel> = () => {
-  const [channels, setChannels] = useState([] as Array<Channel>);
+export type UseSystemChannelsOptions = {
+  autoRefresh?: boolean;
+  autoRefreshInterval?: number;
+};
+
+const DefaultUseSystemChannelsOptions: UseSystemChannelsOptions = {
+  autoRefresh: false,
+  autoRefreshInterval: 5000,
+};
+
+export const useSystemChannels: (
+  options?: UseSystemChannelsOptions
+) => [Channel[], () => void] = (options?) => {
+  const { autoRefresh, autoRefreshInterval } = {
+    ...DefaultUseSystemChannelsOptions,
+    ...options,
+  };
+
+  const [channels, setChannels] = useState((undefined as unknown) as Channel[]);
+
+  const [shouldRefresh, setShouldRefresh] = useState({});
+  const refresh = () => setShouldRefresh({});
 
   useEffect(() => {
-    getSystemChannels().then(channels => setChannels(channels));
-  });
+    getSystemChannels().then(newChannels => {
+      setChannels(newChannels);
+    });
+  }, [shouldRefresh]);
 
-  return channels;
+  useEffect(() => {
+    if (autoRefresh) {
+      const interval = setInterval(() => refresh(), autoRefreshInterval);
+      return () => {
+        clearInterval(interval);
+      };
+    }
+
+    return;
+  }, [autoRefresh, autoRefreshInterval]);
+
+  return [channels, refresh];
 };
