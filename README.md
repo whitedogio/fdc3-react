@@ -1,3 +1,6 @@
+[![npm-build](https://github.com/whitedogio/fdc3-react/workflows/CI/badge.svg)](https://github.com/whitedogio/fdc3-react/actions?query=workflow%3ACI) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/whitedogio/fdc3-react?include_prereleases)](https://github.com/whitedogio/fdc3-react/releases/latest) [![npm](https://img.shields.io/npm/v/@whitedog/fdc3-react)](https://www.npmjs.com/package/@whitedog/fdc3-react) [![GitHub](https://img.shields.io/github/license/whitedogio/fdc3-react)](https://opensource.org/licenses/Apache-2.0
+)
+
 # FDC3 React Hooks
 
 React hook helpers for the [FDC3](https://fdc3.finos.org) DesktopAgent API. See also the FDC3 [npm package](https://www.npmjs.com/package/@finos/fdc3).
