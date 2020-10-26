@@ -4,7 +4,7 @@ React hook helpers for the [FDC3](https://fdc3.finos.org) DesktopAgent API. See 
 
 ## Usage
 
-Take a look at the [example app](https://github.com/whitedogio/fdc3-react/tree/main/example/index.tsx) for some more detailed example usage.
+Take a look at the [example app](https://github.com/whitedogio/fdc3-react/tree/main/example/index.tsx) for some more detailed example usage. You can see the examples deployed [here](http://fdc3-react-example.s3-website.eu-west-2.amazonaws.com/).
 
 ### useCurrentChannel
 
