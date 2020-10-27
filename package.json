@@ -1,8 +1,8 @@
 {
   "name": "@whitedog/fdc3-react",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0-alpha.1",
   "author": "White Dog & Company Ltd.",
-  "homepage": "https://whitedog.io",
+  "homepage": "https://github.com/whitedogio/fdc3-react",
   "repository": {
     "type": "git",
     "url": "https://github.com/whitedogio/fdc3-react.git"
@@ -60,6 +60,7 @@
     "@types/react-dom": "^16.9.8",
     "husky": "^4.3.0",
     "jest": "^26.6.1",
+    "react-dom": "^16.8.0",
     "react-test-renderer": "^16.8.0",
     "size-limit": "^4.6.0",
     "ts-jest": "^26.4.2",
@@ -68,8 +69,7 @@
     "typescript": "^3.9.0"
   },
   "dependencies": {
-    "@finos/fdc3": "./lib/finos-fdc3-1.1.0-alpha.2-local.tgz",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "@finos/fdc3": "^1.1.0-alpha.3",
+    "react": "^16.8.0"
   }
 }

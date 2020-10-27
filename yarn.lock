@@ -873,9 +873,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@finos/fdc3@./lib/finos-fdc3-1.1.0-alpha.2-local.tgz":
-  version "1.1.0-alpha.2-local"
-  resolved "./lib/finos-fdc3-1.1.0-alpha.2-local.tgz#23187cb32e583caffbda9627e4124daaa7e974a7"
+"@finos/fdc3@^1.1.0-alpha.3":
+  version "1.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@finos/fdc3/-/fdc3-1.1.0-alpha.3.tgz#7a62fde24e6c3fc116b3566c0afbb78c821aefec"
+  integrity sha512-8g2q29DhDRGhgf8O5/Jfh+PX8k0wlkSarje5GmQRT8Emlaj+efwdkTqCdsUZRW0Rb/yZ/YrV9JLnPyEcPdEl2w==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
