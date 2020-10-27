@@ -42,21 +42,21 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  # publish-github:
-  #   needs: test
-  #   name: Publish to GitHub
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v2
-  #     - name: Configure Node
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: '12'
-  #         registry-url: 'https://npm.pkg.github.com'
-  #     - name: Install dependencies
-  #       uses: bahmutov/npm-install@v1
-  #     - name: Publish
-  #       run: yarn publish --access public
-  #       env:
-  #         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  publish-github:
+    needs: test
+    name: Publish to GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Configure Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+          registry-url: 'https://npm.pkg.github.com'
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+      - name: Publish
+        run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
